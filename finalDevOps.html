@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Complete Beginner Roadmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        .subsection {
+            margin-bottom: 2rem;
+        }
+
+        .subsection h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+            font-weight: 600;
+        }
+
+        .learning-items {
+            margin-bottom: 1rem;
+        }
+
+        .learning-item {
+            background: #f7fafc;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            transition: background 0.2s ease;
+        }
+
+        .learning-item:hover {
+            background: #edf2f7;
+        }
+
+        .learning-item code {
+            background: #e2e8f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #2d3748;
+        }
+
+        .tasks {
+            background: #f0fff4;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid #9ae6b4;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+
+        .task-item:hover {
+            background: #e6fffa;
+        }
+
+        .task-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .task-number {
+            background: #38a169;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50%;
+            min-width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.1rem;
+        }
+
+        .task-text {
+            flex: 1;
+            font-size: 0.9rem;
+            color: #2d3748;
+        }
+
+        .task-text code {
+            background: #e2e8f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #2d3748;
+        }
+
+        .separator {
+            height: 2px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 1.5rem 0;
+            border-radius: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DevOps Complete Beginner Roadmap</h1>
+            <p>(with Topics, Commands, and Practice Tasks)</p>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="roadmap-grid">
+            <div class="section">
+                <h2 class="section-title">1. <strong>Linux Fundamentals</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">Understand Linux file system structure and navigate it using commands like <code>ls</code>, <code>cd</code>, <code>pwd</code></div>
+                        <div class="learning-item">Perform file operations: create, delete, move, copy with <code>mkdir</code>, <code>rm</code>, <code>mv</code>, <code>cp</code></div>
+                        <div class="learning-item">Manage users and groups using <code>useradd</code>, <code>usermod</code>, <code>groupadd</code>, <code>passwd</code></div>
+                        <div class="learning-item">Understand file permissions and change them using <code>chmod</code>, <code>chown</code></div>
+                        <div class="learning-item">Manage software using package managers: <code>apt</code>, <code>yum</code>, <code>dnf</code></div>
+                        <div class="learning-item">Network commands: <code>ping</code>, <code>netstat</code>, <code>curl</code>, <code>ifconfig</code>, <code>ip</code>, <code>traceroute</code></div>
+                        <div class="learning-item">Monitor and control processes: <code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>, <code>killall</code></div>
+                        <div class="learning-item">Use redirection <code>></code>, <code>>></code>, <code><</code> and piping <code>|</code></div>
+                        <div class="learning-item">Start/stop services using <code>systemctl start|stop|status|enable &lt;service&gt;</code></div>
+                        <div class="learning-item">Set scheduled jobs using <code>crontab -e</code>, list with <code>crontab -l</code></div>
+                        <div class="learning-item">Search and manipulate text with <code>grep</code>, <code>awk</code>, <code>sed</code>, <code>find</code>, <code>locate</code></div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Create a new user, set their password, and add them to a group.</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Compress a given directory into a <code>.tar.gz</code> archive using the <code>tar</code> command.</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Set a cron job to clean <code>.log</code> files in a folder every hour (use a simple <code>rm</code> command, no script).</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Enable and start the SSH service, then verify its status.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">2. <strong>Networking Basics for DevOps</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">OSI Model basics and ports</div>
+                        <div class="learning-item">IP addressing, DNS, DHCP</div>
+                        <div class="learning-item">NAT, private vs public IP</div>
+                        <div class="learning-item">Common protocols: HTTP, HTTPS, FTP, SSH, SCP</div>
+                        <div class="learning-item">Tools: <code>ping</code>, <code>traceroute</code>, <code>netstat</code>, <code>ss</code>, <code>curl</code>, <code>wget</code>, <code>telnet</code>, <code>nc</code></div>
+                        <div class="learning-item">Host file and DNS resolution</div>
+                        <div class="learning-item">Check open ports using <code>nmap</code>, <code>ss</code>, <code>netstat</code></div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Use <code>ping</code>, <code>traceroute</code>, and <code>nslookup</code> to troubleshoot a domain name.</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Check if a port is open on a server using <code>nc</code> or <code>telnet</code>.</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Set up a simple HTTP server with Python and test connectivity.</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Scan local network ports using <code>nmap</code>.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">3. <strong>Version Control with Git</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">Initialize repositories with <code>git init</code>, or clone existing ones with <code>git clone</code></div>
+                        <div class="learning-item">Track changes with <code>git status</code>, stage with <code>git add</code>, commit with <code>git commit</code></div>
+                        <div class="learning-item">Sync changes using <code>git push</code>, <code>git pull</code>, <code>git fetch</code></div>
+                        <div class="learning-item">Work with branches: create <code>git branch</code>, switch <code>git checkout</code>, merge <code>git merge</code></div>
+                        <div class="learning-item">Resolve merge conflicts and view history with <code>git log</code>, <code>git diff</code></div>
+                        <div class="learning-item">Use <code>git tag</code> for versioning, configure <code>.gitignore</code>, and set global user config</div>
+                        <div class="learning-item">Collaborate using GitHub/GitLab: push code, open pull requests, fork repos</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Create and push a Git repo to GitHub with README and <code>.gitignore</code></span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Create a feature branch, make changes, and merge to main after conflict resolution</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Write a <code>.gitignore</code> for a sample Node.js project</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Clone a public GitHub repo, make a change, and submit a pull request</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">4. <strong>Shell Scripting</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">Write bash scripts with <code>#!/bin/bash</code> and run them with <code>chmod +x</code></div>
+                        <div class="learning-item">Use variables, read user input, print with <code>echo</code></div>
+                        <div class="learning-item">Conditional statements: <code>if</code>, <code>else</code>, <code>elif</code></div>
+                        <div class="learning-item">Loops: <code>for</code>, <code>while</code>, <code>until</code></div>
+                        <div class="learning-item">Functions and return values</div>
+                        <div class="learning-item">Access script arguments via <code>$1</code>, <code>$2</code>, etc.</div>
+                        <div class="learning-item">Check exit status with <code>$?</code></div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Create a script that prints the number of lines, words, and characters in a file</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Write a script that monitors and restarts a service if it's down</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Automate compression of <code>.log</code> files in a folder using a loop</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Create a script that accepts input and outputs a personalized greeting</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">5. <strong>Docker and Containerization</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">What is Docker? Containers vs VMs</div>
+                        <div class="learning-item">Install Docker, understand Docker architecture</div>
+                        <div class="learning-item">Basic commands: <code>docker run</code>, <code>ps</code>, <code>stop</code>, <code>rm</code>, <code>images</code>, <code>rmi</code></div>
+                        <div class="learning-item">Create and use Dockerfiles</div>
+                        <div class="learning-item">Volumes and bind mounts</div>
+                        <div class="learning-item">Docker Compose basics and file structure</div>
+                        <div class="learning-item">Networking in Docker: bridge, host, none</div>
+                        <div class="learning-item">Pushing to and pulling from Docker Hub</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Run a basic Nginx container and expose it on a port</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Write a Dockerfile for a Python Flask app and build an image</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Create a <code>docker-compose.yml</code> file for a multi-container app (e.g., web + db)</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Push a custom image to Docker Hub</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">6. <strong>CI/CD with GitHub Actions</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">What is CI/CD?</div>
+                        <div class="learning-item">GitHub Actions basics: workflows, jobs, steps</div>
+                        <div class="learning-item">Writing <code>.github/workflows/main.yml</code></div>
+                        <div class="learning-item">Triggers: <code>push</code>, <code>pull_request</code>, <code>schedule</code></div>
+                        <div class="learning-item">Using marketplace actions</div>
+                        <div class="learning-item">Setting environment variables and secrets</div>
+                        <div class="learning-item">Caching dependencies</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Create a workflow that runs tests on every push</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Setup automatic deployment on push to <code>main</code> branch</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Add environment variables and use them in your workflow</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Use GitHub Actions to lint a codebase (e.g., ESLint, flake8)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">7. <strong>Infrastructure as Code - Terraform Basics</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">What is IaC?</div>
+                        <div class="learning-item">Install Terraform</div>
+                        <div class="learning-item">Create and initialize configuration files (<code>.tf</code>)</div>
+                        <div class="learning-item">Providers and resources</div>
+                        <div class="learning-item">Plan, apply, destroy cycle</div>
+                        <div class="learning-item">Output variables and remote state basics</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Deploy an EC2 instance using Terraform on AWS</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Create a basic VPC and subnet configuration</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Use variables and outputs to make your config modular</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Destroy and reapply infrastructure safely</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">8. <strong>Configuration Management with Ansible</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">What is Ansible?</div>
+                        <div class="learning-item">Install Ansible</div>
+                        <div class="learning-item">Inventory files and ad-hoc commands</div>
+                        <div class="learning-item">YAML & Playbooks</div>
+                        <div class="learning-item">Modules: <code>apt</code>, <code>copy</code>, <code>template</code>, <code>service</code>, <code>user</code></div>
+                        <div class="learning-item">Handlers and conditionals</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Write a playbook to install and start Nginx on a remote host</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Create a user and set SSH key via playbook</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Use a template to configure a web server</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Run an ad-hoc command to check uptime on multiple machines</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">9. <strong>Monitoring and Logging</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">Importance of monitoring in DevOps</div>
+                        <div class="learning-item">Install and use Prometheus for metrics</div>
+                        <div class="learning-item">Setup Grafana dashboards</div>
+                        <div class="learning-item">Node Exporter and basic metrics</div>
+                        <div class="learning-item">Logging with ELK stack (Elasticsearch, Logstash, Kibana)</div>
+                        <div class="learning-item">Alerting basics</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Install Prometheus and configure it to monitor Node Exporter</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Create a Grafana dashboard with at least 2 visualizations</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Set up an alert rule for high CPU usage</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Install and visualize logs using the ELK stack</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">10. <strong>Kubernetes Basics</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">What is Kubernetes and why use it?</div>
+                        <div class="learning-item">Install Minikube or use Play with Kubernetes</div>
+                        <div class="learning-item">Pods, Deployments, Services</div>
+                        <div class="learning-item">YAML files for resource definitions</div>
+                        <div class="learning-item">Basic <code>kubectl</code> commands: get, describe, apply, delete</div>
+                        <div class="learning-item">Port forwarding and service exposure</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Deploy a pod with Nginx and expose it</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Create a deployment and scale it up/down</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Write a YAML manifest for a service + deployment</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Use <code>kubectl port-forward</code> to test a deployed pod</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">11. <strong>Cloud Fundamentals (AWS)</strong></h2>
+                
+                <div class="subsection">
+                    <h3>Learning:</h3>
+                    <div class="learning-items">
+                        <div class="learning-item">What is Cloud? IaaS vs PaaS vs SaaS</div>
+                        <div class="learning-item">AWS core services: EC2, S3, IAM, VPC, RDS</div>
+                        <div class="learning-item">IAM roles and permissions</div>
+                        <div class="learning-item">AWS CLI setup and usage</div>
+                        <div class="learning-item">Budgeting and cost estimation tools</div>
+                    </div>
+                </div>
+
+                <div class="tasks">
+                    <h3>Tasks:</h3>
+                    <div class="task-item">
+                        <span class="task-number">1</span>
+                        <span class="task-text">Launch an EC2 instance manually and connect via SSH</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">2</span>
+                        <span class="task-text">Upload files to an S3 bucket using AWS CLI</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">3</span>
+                        <span class="task-text">Create and attach an IAM role to an instance</span>
+                    </div>
+                    <div class="task-item">
+                        <span class="task-number">4</span>
+                        <span class="task-text">Use the AWS pricing calculator for estimating service costs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+    </div>
+</body>
+</html>
